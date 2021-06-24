@@ -1,0 +1,24 @@
+﻿@model BookStore.Models.Book
+
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.Title)
+    @Html.TextBoxFor(m => m.Title, null, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(m => m.Publisher)
+    @Html.TextBoxFor(m => m.Publisher, null, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Publisher, "", new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(m => m.Pages)
+    @Html.TextBoxFor(m => m.Pages, null, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Pages, "", new { @class = "text-danger" })
+    <br />
+    @Html.LabelFor(m => m.CountryofOrigin)
+    @Html.TextBoxFor(m => m.CountryofOrigin, null, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.CountryofOrigin, "", new { @class = "text-danger" })
+
+    <br />
+    <button class="btn btn-outline-success" type="submit">Save</button>
+}
